@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+	<script src="http://d3js.org/d3.v7.min.js"> </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bilderrahmen@1.0.0/bilderrahmen.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/gh/requirejs/requirejs@2.3.5/require.js"></script>
+
+
+  <link rel="stylesheet" href="main.css">
+
+
+  <script src="data.js"></script>
+  <style type="text/css">
+    
+
+
+
+    .img{
+      width: 200px;
+    }
+    .gallery{
+      width: 810px;
+      margin: 0 auto;
+    }
+    .cent_img{
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 3 / 2; 
+        padding-left: 230px;
+}
+.div2 { grid-area: 1 / 2 / 3 / 3; 
+padding-left: 230px;}
+.div3 { grid-area: 3 / 1 / 6 / 3; 
+      
+      padding-left: 25%}
+  </style>
+</head>
+
+<body><span class="grid-content">
+    <div class="awr"><a href="index.html">
+        <button class="home_button">home</button></a></div>
+    <div class="awr"><a>companies: 7,215</a></div>
+    <div class="awr"><a>total market cap: $86.168 T</a></div>
+    <div class="awr"><a>
+        <input type="text" placeholder="Company name, ticker..."/></a></div></span>
+  <div class="content">
+
+
+
+    <div class="gallery">
+<a href="https://www.investopedia.com/thmb/Wj7ePn6GDF7ruwMCb-_WIwm58Vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/CEO-81387466341c465aa8017e70939db730.jpg" target="_blank"><img class="img" 
+        src="https://www.investopedia.com/thmb/Wj7ePn6GDF7ruwMCb-_WIwm58Vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/CEO-81387466341c465aa8017e70939db730.jpg"
+        data-bilderrahmen="gallery-02"
+        data-bilderrahmen-title="Image Four"
+  /></a>
+  <a class="cent_img" href="https://www.investopedia.com/thmb/D4nN4vL9I6E3KfH28F3N4U-wi1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Market-Capitalization-ba038aeebab54f03872ead839a2877a4.jpg" target="_blank"><img class="img" 
+        src="https://www.investopedia.com/thmb/D4nN4vL9I6E3KfH28F3N4U-wi1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Market-Capitalization-ba038aeebab54f03872ead839a2877a4.jpg"
+        data-bilderrahmen="gallery-02"
+        data-bilderrahmen-title="Image Four"
+  /></a>
+  <a href="https://www.investopedia.com/thmb/B7B8sd9J_0VnwzjpFE5Er4TGazo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/priceskimming.asp-final-60df5584e7ed4656bc89b4160219b6f5.png" target="_blank"><img class="img" 
+        src="https://www.investopedia.com/thmb/B7B8sd9J_0VnwzjpFE5Er4TGazo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/priceskimming.asp-final-60df5584e7ed4656bc89b4160219b6f5.png"
+        data-bilderrahmen="gallery-02"
+        data-bilderrahmen-title="Image Four"
+  /></a>
+</div><br><br>
+
+
+
+    <div class="title_wr">
+      <h2>Largest Companies by Market Cap </h2>
+    </div>
+    <div class="main-content">
+      <table id="customers">
+        <tr id="header_tr">
+          <th>Rank</th>
+          <th>Name</th>
+          <th class="remtd">Market Cap</th>
+          <th class="remtd">Price</th>
+          <th class="remtd">Today</th>
+          <th class="remtd">Price (30 days)</th>
+          <th class="remtd">CEO</th>
+        </tr>
+        <tr onclick="window.location='apl.html';"><a>
+            <td>1</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/AAPL.webp"/><span class="name_first_span">Apple</span><br/><span class="name_second_span">APPL</span></td>
+            <td class="remtd">$2.143</td>
+            <td class="remtd">$134.76</td>
+            <td class="remtd"><span>+1.01%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Tim Cook</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>2</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/2222.SR.webp"/><span class="name_first_span">Saudi Aramco</span><br/><span class="name_second_span">2222.SR</span></td>
+            <td class="remtd">$1.881</td>
+            <td class="remtd">$8.55</td>
+            <td class="remtd"><span>-0.16%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Amin H. Nasser</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>3</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/MSFT.png"/><span class="name_first_span">Microsoft</span><br/><span class="name_second_span">MSFT</span></td>
+            <td class="remtd">$4.783</td>
+            <td class="remtd">$219.23</td>
+            <td class="remtd"><span>+5.30%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Satya Nadella</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>4</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/GOOG.png"/><span class="name_first_span">Alphabet (Google)</span><br/><span class="name_second_span">GOOG</span></td>
+            <td class="remtd">$3.195</td>
+            <td class="remtd">$92.80</td>
+            <td class="remtd"><span>+0.97%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Sundar Pichai</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>5</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/AMZN.png"/><span class="name_first_span">Amazon</span><br/><span class="name_second_span">AMZN</span></td>
+            <td class="remtd">$4.000</td>
+            <td class="remtd">$38.12</td>
+            <td class="remtd"><span>+2.05%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Andy Jassy</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>6</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/BRK-B.png"/><span class="name_first_span">Berkshire Hathaway</span><br/><span class="name_second_span">BRK-B</span></td>
+            <td class="remtd">$500.57</td>
+            <td class="remtd">$117.64</td>
+            <td class="remtd"><span>-0.10%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Warren Buffett</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>7</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/V.png"/><span class="name_first_span">Visa</span><br/><span class="name_second_span">V</span></td>
+            <td class="remtd">$402.35</td>
+            <td class="remtd">$203.06</td>
+            <td class="remtd"><span>-1.25%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Ryan McInerney</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>8</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/XOM.png"/><span class="name_first_span">Exxon Mobil</span><br/><span class="name_second_span">XOM</span></td>
+            <td class="remtd">$465.98</td>
+            <td class="remtd">$113.15</td>
+            <td class="remtd"><span>-0.06%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Darren Woods</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>9</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/TCEHY.png"/><span class="name_first_span">Tencent</span><br/><span class="name_second_span">TCEHY</span></td>
+            <td class="remtd">$458.31</td>
+            <td class="remtd">$47.80</td>
+            <td class="remtd"><span>+2.85%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Ma Huateng</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>10</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/UNH.png"/><span class="name_first_span">UnitedHealth</span><br/><span class="name_second_span">UNH</span></td>
+            <td class="remtd">$457.42</td>
+            <td class="remtd">$47.80</td>
+            <td class="remtd"><span>-1.23%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><span>Andrew Witty</span></td></a></tr>
+        <!--<tr onclick="window.location='undefined';"><a>
+            <td>11</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/TSM.png"/><span class="name_first_span">TSMC</span><br/><span class="name_second_span">TSM</span></td>
+            <td class="remtd">$1.783</td>
+            <td class="remtd">$239.23</td>
+            <td class="remtd"><span>+0.30%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><img src="https://companiesmarketcap.com/img/flags/us.png"/><span>USA</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>12</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/WMT.png"/><span class="name_first_span">Walmart</span><br/><span class="name_second_span">WMT</span></td>
+            <td class="remtd">$1.195</td>
+            <td class="remtd">$42.80</td>
+            <td class="remtd"><span>+3.97%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><img src="https://companiesmarketcap.com/img/flags/us.png"/><span>USA</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>13</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/PG.png"/><span class="name_first_span">Procter & Gambel</span><br/><span class="name_second_span">PG</span></td>
+            <td class="remtd">$1.000</td>
+            <td class="remtd">$98.12</td>
+            <td class="remtd"><span>+2.99%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><img src="https://companiesmarketcap.com/img/flags/us.png"/><span>USA</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>14</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/MA.png"/><span class="name_first_span">Mastercard</span><br/><span class="name_second_span">MA</span></td>
+            <td class="remtd">$700.57</td>
+            <td class="remtd">$317.64</td>
+            <td class="remtd"><span>-0.40%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><img src="https://companiesmarketcap.com/img/flags/us.png"/><span>USA</span></td></a></tr>
+        <tr onclick="window.location='undefined';"><a>
+            <td>15</td>
+            <td><img class="name_image" src="https://companiesmarketcap.com/img/company-logos/64/NESN.SW.png"/><span class="name_first_span">Nestlé</span><br/><span class="name_second_span">NESN.SW</span></td>
+            <td class="remtd">$472.35</td>
+            <td class="remtd">$223.06</td>
+            <td class="remtd"><span>-0.25%</span></td>
+            <td class="price remtd">
+              <svg>
+                <path d="M0,3 5,5 10,5 15,14 20,12 25,12 30,9 35,7 40,11 45,22 50,25 55,29 60,29 65,24 70,29 75,30 80,30 85,33 90,39 95,33 100,33 105,33 110,41 115,39 120,41 125,33 130,32 135,31 140,27 145,27 150,25 155,25"></path>
+              </svg>
+            </td>
+            <td class="country remtd"><img src="https://companiesmarketcap.com/img/flags/us.png"/><span>USA</span></td></a></tr>-->
+      </table>
+      <div class="center_button"><a>
+          <button>next 15</button></a></div>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="left_top">What is the market capitalization of a company?
+      <The>market capitalization sometimes referred as Marketcap, is the value of a publicly listed company. In most cases it can be easily calculated by multiplying the share price with the amount of outstanding shares.</The>
+    </div>
+    <div class="left_right">DISCLAIMER
+      <CompaniesMarketCap class="com">is not associated in any way with CoinMarketCap.com</CompaniesMarketCap>
+      <Stock>prices are delayed, the delay can range from a few minutes to several hours.</Stock>
+      <Company>logos are from the CompaniesLogo.com logo database and belong to their respective copyright holders. Companies Marketcap displays them for editorial purposes only.</Company>
+    </div>
+    <div class="right">Contact For inquiries or if you want to report a problem write to hello@8marketcap.com</div>
+  </div>
+  <div class="parent">
+  <div class="div1">
+  <h1>СОРТИРОВКА</h1>
+        <form>
+          <font color="black"><b>Отсортировать по:</b></font><br><br>
+          <select name="sort-options" id="first" onchange="show_second()">
+          	<option value="0">Rank</option>
+            <option value="1">Name</option>
+            <option value="2">Market Cap</option>
+            <option value="3">Price</option>
+            <option value="4">Today change</option>
+            <option value="6">Country</option>
+           </select>
+           <select name="sort-options" id="second" onchange="write_second_num()">
+          	<option value="0">Rank</option>
+            <option value="1">Name</option>
+            <option value="2">Market Cap</option>
+            <option value="3">Price</option>
+            <option value="4">Today change</option>
+            <option value="6">Country</option>
+           </select>
+
+           <input id="button" type="button" value="ОК">
+        </form>
+
+        <font color="black"><b> <p>Отобразить: </p></b></font>
+        <form>
+          <font color="black">С капитализацией от:</font>
+          <select name="sort-options" id="third">
+            <option value="0">$1.0</option>
+            <option value="1">$5.0</option>
+            <option value="2">$10.0</option>
+            <option value="3">$50.0</option>
+            <option value="4" selected>$100.0</option>
+           </select>
+
+            <input type="button" id="button2" value="ОК">
+        </form>
+        <form>
+          <font color="black">CEO:</font>
+          <input id="country_value" type="text" size="10" placeholder="имя CEO">
+          
+          <input type="button" id="button3" value="ОК">
+        </form>
+
+        <form>
+          <font color="black">Изменение в цене за 24 часа более чем:</font>
+          <select id="fourth" name="sort-options">
+            <option value="0">0.5%</option>
+            <option value="1">1%</option>
+            <option value="2" selected>2%</option>
+            <option value="3">5%</option>
+          </select>
+          
+          <input type="button" id="button4" value="ОК">
+        </form>
+ 
+       
+</div>
+
+
+<div class="div2">
+   <h1>ГРАФИК</h1>
+   <div>
+  <form>
+ <p>Значениe по оси OX</p>
+ <input type="radio" name="ox" value="Name" checked>Name<br>
+ <input type="radio" name="ox" value="CEO">CEO<br>
+ <p>Значениe по оси OY</p>
+
+ <input type="radio" name="oy" value="MarketCap" checked>Market Cap<br>
+ <input type="radio" name="oy" value="Price">Price<br>
+ <p>
+ <input type=button value="Построить"
+ onclick="drawGraph(this.form)">
+ </p>
+  </form>
+</div>
+</div>
+<div class="div3">
+ <svg height="5" id="graph">
+ </svg>
+ </div>
+</div>
+
+
+
+
+
+</div>
+
+
+<script>
+    require(['https://cdn.jsdelivr.net/npm/bilderrahmen@1.0.0/bilderrahmen.umd.es5.js'], function(module) {
+        new module.Bilderrahmen({ closeOnOutsideClick: true });
+    });
+  </script>
+</body>
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript">
+	function sortTable2(column2, column1) {
+		  var table, rows, switching, i, x, y, shouldSwitch;
+		  table = document.getElementById("customers");
+		  switching = true;
+		  while (switching) {
+		    switching = false;
+		    rows = table.rows;
+		    for (i = 1; i < (rows.length - 1); i++) {
+		      shouldSwitch = false;
+		      if (rows[i].getElementsByTagName("TD")[column2].innerHTML != rows[i+1].getElementsByTagName("TD")[column2].innerHTML){
+		      	continue;
+		      }
+		      x = rows[i].getElementsByTagName("TD")[column1];
+		      y = rows[i + 1].getElementsByTagName("TD")[column1];
+		      if (column1 == 0){
+			      if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 1){
+			  	  if (x.getElementsByTagName("span")[0].innerHTML > y.getElementsByTagName("span")[0].innerHTML) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if ((column1 == 2)||(column1 == 3)){
+			  	  if (parseFloat(x.innerHTML.substring(1)) > parseFloat(y.innerHTML.substring(1))) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 4){
+			  	  if (parseFloat(x.getElementsByTagName("span")[0].innerHTML.slice(1, -1)) > parseFloat(y.getElementsByTagName("span")[0].innerHTML.slice(1, -1))) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 6){
+			  	  if (x.getElementsByTagName("span")[0].innerHTML > y.getElementsByTagName("span")[0].innerHTML) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  }
+		    }
+		    if (shouldSwitch) {
+		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		      switching = true;
+		    }
+		  }
+	}
+	function sortTable1(column1, column2) {
+		  var table, rows, switching, i, x, y, shouldSwitch;
+		  table = document.getElementById("customers");
+		  switching = true;
+		  while (switching) {
+		    switching = false;
+		    rows = table.rows;
+		    for (i = 1; i < (rows.length - 1); i++) {
+		      shouldSwitch = false;
+		      x = rows[i].getElementsByTagName("TD")[column1];
+		      y = rows[i + 1].getElementsByTagName("TD")[column1];
+		      if (column1 == 0){
+			      if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 1){
+			  	  if (x.getElementsByTagName("span")[0].innerHTML > y.getElementsByTagName("span")[0].innerHTML) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if ((column1 == 2)||(column1 == 3)){
+			  	  if (parseFloat(x.innerHTML.substring(1)) > parseFloat(y.innerHTML.substring(1))) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 4){
+			  	  if (parseFloat(x.getElementsByTagName("span")[0].innerHTML.slice(1, -1)) > parseFloat(y.getElementsByTagName("span")[0].innerHTML.slice(1, -1))) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  } else if (column1 == 6){
+			  	  if (x.getElementsByTagName("span")[0].innerHTML > y.getElementsByTagName("span")[0].innerHTML) {
+			        shouldSwitch = true;
+			        break;
+			      }
+			  }
+		    }
+		    if (shouldSwitch) {
+		      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		      switching = true;
+		    }
+		  }
+
+		  sortTable2(column1, column2);
+	}
+	function filter_cap(from) {
+		var table, rows, switching, i, x, y, shouldSwitch;
+		  table = document.getElementById("customers");
+		  rows = table.rows;
+		  for (i = 1; i < (rows.length - 1); i++) {
+		      x = rows[i].getElementsByTagName("TD")[2];
+		      if (parseFloat(x.innerHTML.substring(1)) < from){
+		      	rows[i].style.display = "none";
+		      	//table-row;
+		      } else{
+		      	rows[i].style.display = "table-row";
+		      }
+		  }
+	}
+	function filter_country(country) {
+		var table, rows, switching, i, x, y, shouldSwitch;
+		  table = document.getElementById("customers");
+		  rows = table.rows;
+		  for (i = 1; i < (rows.length); i++) {
+		      x = rows[i].getElementsByTagName("TD")[6];
+		      if (!x.getElementsByTagName("span")[0].innerHTML.toUpperCase().includes(country.toUpperCase())){
+		      	rows[i].style.display = "none";
+		      	continue;
+		      } else{
+		      	rows[i].style.display = "table-row";
+		      }
+		  }
+	}
+	function filter_price_change(price_change) {
+		var table, rows, switching, i, x, y, shouldSwitch;
+		  table = document.getElementById("customers");
+		  rows = table.rows;
+		  for (i = 1; i < (rows.length); i++) {
+		      x = rows[i].getElementsByTagName("TD")[4];
+		      if (parseFloat(x.getElementsByTagName("span")[0].innerHTML.slice(1, -1)) < price_change){
+		      	rows[i].style.display = "none";
+		      	continue;
+		      } else{
+		      	rows[i].style.display = "table-row";
+		      }
+		  }
+	}
+
+	var first_num = -1;
+	var second_num = -1;
+
+
+	let first = document.getElementById("first");
+	let second = document.getElementById("second");
+	let third = document.getElementById("third");
+	let fourth = document.getElementById("fourth");
+	document.getElementById("first").selectedIndex = -1;
+	document.getElementById("second").selectedIndex = -1;
+	for (var i = 0; i < second.getElementsByTagName("option").length; i++) {
+		second.getElementsByTagName("option")[i].style.display = "none";
+	}
+	function show_second(){
+		for (var i = 0; i < first.getElementsByTagName("option").length; i++) {
+			if (first.getElementsByTagName("option")[i].selected == true){
+				second.getElementsByTagName("option")[i].style.display = "none";
+				first_num = i;
+				if (i == 5){
+					first_num = i+1;
+				}
+			} else{
+				second.getElementsByTagName("option")[i].style.display = "block";
+			}
+		}
+	}
+	function write_second_num(){
+		for (var i = 0; i < second.getElementsByTagName("option").length; i++) {
+			if (second.getElementsByTagName("option")[i].selected == true){
+				second_num = i;
+				if (i == 5){
+					second_num = i+1;
+				}
+			}
+		}
+	}
+	document.getElementById("button").addEventListener("click", sort_table, false);
+	document.getElementById("button2").addEventListener("click", filter1, false);
+	document.getElementById("button3").addEventListener("click", filter2, false);
+	document.getElementById("button4").addEventListener("click", filter3, false);
+	function sort_table(){
+		if ((first_num != -1)&&(second_num != -1)){
+			sortTable1(first_num, second_num);
+			first_num = -1;
+			second_num = -1;
+			document.getElementById("first").selectedIndex = -1;
+			document.getElementById("second").selectedIndex = -1;
+			for (var i = 0; i < second.getElementsByTagName("option").length; i++) {
+				second.getElementsByTagName("option")[i].style.display = "none";
+			}
+		}
+	}
+	function filter1(){
+		for (var i = 0; i < third.getElementsByTagName("option").length; i++) {
+			if (third.getElementsByTagName("option")[i].selected == true){
+				filter_cap(parseInt(third.getElementsByTagName("option")[i].innerHTML.substring(1)));
+			}
+		}
+	}
+	function filter2(){
+		filter_country(country_value.value);
+	}
+	function filter3(){
+		for (var i = 0; i < fourth.getElementsByTagName("option").length; i++) {
+			if (fourth.getElementsByTagName("option")[i].selected == true){
+				filter_price_change(parseFloat(fourth.getElementsByTagName("option")[i].innerHTML.substring(-1)));
+			}
+		}
+	}
+	//filter_cap(500);
+	//filter_country("China");
+	//filter_price_change(4.0);
+	//sortTable1(0, 1);
+</script>
